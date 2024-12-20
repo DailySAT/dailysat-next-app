@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ name, question }) => {
   }
 
   return (
-    <>
+    <div className="text-center mb-16">
       <h1 className="text-3xl font-semibold">{name}</h1>
       <div className="mt-2 flex justify-center space-x-6">
         <div className="flex items-center space-x-2">
@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ name, question }) => {
           <p className="cursor-pointer text-blue-600 hover:underline" onClick={() => shareRedirect(linkedInShare)}>LinkedIn</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

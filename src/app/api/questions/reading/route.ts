@@ -3,7 +3,7 @@ import { Db, Document } from "mongodb";
 
 /**
  * @swagger
- * /api/get/question:
+ * /api/question/reading:
  *   get:
  *     description: 
  *       Retrieves a random question from the "questions" collection in MongoDB based on the provided `topic`.

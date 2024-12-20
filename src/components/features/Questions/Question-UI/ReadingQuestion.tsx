@@ -1,27 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
-import AnswerOption from "../shared-components/AnswerOption";
+import AnswerOption from "../../shared-components/AnswerOption";
 import { Answers } from "@/types/answer";
 import { useAnswerStore } from "@/store/answer";
 import Image from "next/image";
 import axios from "axios";
+import { Highlight } from "@/types/questions";
+import { QuestionsProps } from "@/types/questions";
 
-interface QuestionProps {
-  title: string;
-  onAnswerSubmit: (answer: Answers) => void;
-  optionA: string;
-  optionB: string;
-  optionC: string;
-  optionD: string;
-  id: string;
-}
-
-interface Highlight {
-  text: string;
-  startOffset: number;
-  endOffset: number;
-}
-
-const Question: React.FC<QuestionProps> = ({
+const ReadingQuestion: React.FC<QuestionsProps> = ({
   title,
   optionA,
   optionB,
@@ -276,4 +262,4 @@ const Question: React.FC<QuestionProps> = ({
   );
 };
 
-export default Question;
+export default ReadingQuestion;
